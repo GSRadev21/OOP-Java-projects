@@ -24,7 +24,7 @@ public class Animal {
         return age;
     }
 
-    public void makeSound(String sound){
+    public void makeSound(){
         System.out.println(sound);
     }
 }
