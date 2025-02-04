@@ -75,17 +75,21 @@ public class Pictures {
 
     public void disPriceOfPictureByAuthor() {
 
-        int totalPrice = 0;
+        int totalPrice = 0, counter = 0;
+        boolean doesAuthorExists = false;
         String author;
         author = scanner.nextLine();
         for(Picture i : pictureList) {
             if(i.getAuthorName().equals(author)) {
                 totalPrice += i.getPrice();
-            } else {
-
-                findAveragePrice(pictureList);
+                doesAuthorExists = true;
+                counter++;
             }
         }
-        System.out.println("thte avarege price of" + author + "is: " + totalPrice / pictureList.size());
+        if(doesAuthorExists) {
+            System.out.println("thte avarege price of " + author + " 's pictures in the list is: " + totalPrice / counter);
+        } else {
+            findAveragePrice(pictureList);
+        }
     }
 }
