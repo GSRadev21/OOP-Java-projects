@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Objects;
+import  javax.sound.midi.*;
 
 public class Pictures {
 
